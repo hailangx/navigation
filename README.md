@@ -2,6 +2,8 @@
 
 A configurable VS Code extension for organizing files into custom navigation trees in the Explorer panel.
 
+![Navigation Extension Demo](navigation.png)
+
 ## 🚀 Try it Now!
 
 **Want to see it in action immediately?** Clone and run:
@@ -15,6 +17,8 @@ cd navigation
 ✨ **That's it!** The extension will be installed and configured with a comprehensive demo. Just reload VS Code and check the Explorer panel for "📂 Navigation".
 
 ## Features
+
+The screenshot above shows the Navigation extension in action with the demo configuration. You'll see:
 
 - **Configurable Navigation Groups**: Define custom file organization hierarchies
 - **Three Organization Types**:
