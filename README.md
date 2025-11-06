@@ -112,6 +112,17 @@ Notes:
 - The release script renames the generated `.vsix` to `navigation-<version>.vsix` and commits it. If you don't want the `.vsix` in git, run with `-NoPush` and manually remove the file before committing, or edit the script.
 - Make sure you have `code` (VS Code CLI) available in your PATH for automatic install.
 
+Releases folder
+---------------
+
+After running the release script, the generated `.vsix` is moved into the `releases/` folder at the repository root and the file is added to git. Example:
+
+```
+releases/navigation-1.0.2.vsix
+```
+
+If you prefer not to track built artifacts in git, either remove the file before committing or run the script with `-NoPush` and clean up the file.
+
 
 To quickly try out the extension with a comprehensive example, copy the configuration from `navigation-demo.json` in this repository:
 
