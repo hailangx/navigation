@@ -140,4 +140,4 @@ npm run watch
 
 ## License
 
-ISC License
+MIT License
