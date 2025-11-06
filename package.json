@@ -3,7 +3,7 @@
   "displayName": "Navigation",
   "publisher": "hailangx",
   "description": "Configurable file navigation with custom tree views for VS Code Explorer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/hailangx/navigation.git"
@@ -58,7 +58,7 @@
                     },
                     "type": {
                       "type": "string",
-                      "enum": ["group", "files", "filter"],
+                      "enum": "group files filter",
                       "description": "Type: 'group' for nested groups, 'files' for exact file paths, 'filter' for pattern matching"
                     },
                     "icon": {
@@ -67,9 +67,7 @@
                     },
                     "files": {
                       "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
+                      "items": "@{type=string}",
                       "description": "Array of exact file paths (for type 'files')"
                     },
                     "pattern": {
@@ -78,9 +76,7 @@
                     },
                     "exclude": {
                       "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
+                      "items": "@{type=string}",
                       "description": "Patterns to exclude"
                     },
                     "children": {
