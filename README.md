@@ -2,23 +2,6 @@
 
 A configurable VS Code extension for organizing files into custom navigation trees in the Explorer panel.
 
-## 📦 Installation
-
-### Option 1: Manual Installation (Recommended)
-1. Download the latest `navigation-1.0.0.vsix` file from the [Releases page](https://github.com/hailangx/navigation/releases)
-2. Open VS Code
-3. Go to Extensions view (`Ctrl+Shift+X`)
-4. Click on the `...` menu in the Extensions view
-5. Select "Install from VSIX..."
-6. Choose the downloaded `.vsix` file
-
-### Option 2: From Source
-1. Clone this repository
-2. Run `npm install`
-3. Run `npm run compile`
-4. Run `vsce package` to create the `.vsix` file
-5. Install the generated `.vsix` file following the steps above
-
 ## Features
 
 - **Configurable Navigation Groups**: Define custom file organization hierarchies
@@ -123,13 +106,24 @@ Examples:
 - `test/**/test*.{cpp,h}` - All test files with .cpp or .h extension
 - `docs/**/*.md` - All Markdown files in docs directory
 
-## Installation
 
-1. Copy the extension folder to your VS Code extensions directory
-2. Run `npm install` to install dependencies
-3. Run `npm run compile` to build the extension
-4. Reload VS Code
-5. The "📂 Navigation" panel will appear in the Explorer tab
+## 📦 Installation
+
+### Option 1: Manual Installation (Recommended)
+1. Download the latest `navigation-1.0.0.vsix` file from the [Releases page](https://github.com/hailangx/navigation/releases)
+2. Open VS Code
+3. Go to Extensions view (`Ctrl+Shift+X`)
+4. Click on the `...` menu in the Extensions view
+5. Select "Install from VSIX..."
+6. Choose the downloaded `.vsix` file
+
+### Option 2: From Source
+1. Clone this repository
+2. Run `npm install`
+3. Run `npm run compile`
+4. Run `vsce package` to create the `.vsix` file
+5. Install the generated `.vsix` file following the steps above
+
 
 ## Development
 
