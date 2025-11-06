@@ -120,8 +120,8 @@
       },
       {
         "command": "navigation.addGroup",
-        "title": "Add Navigation Group",
-        "icon": "$(add)"
+        "title": "Configure Navigation Groups",
+        "icon": "$(gear)"
       }
     ],
     "menus": {

@@ -119,13 +119,16 @@ The demo configuration showcases:
 
 ## Getting Started
 
-The extension starts with an empty configuration. Add navigation groups through VS Code settings or use the "Add Navigation Group" command from the navigation panel.
+The extension starts with an empty configuration. Configure navigation groups through VS Code settings or use the "Configure Navigation Groups" command from the navigation panel.
 
 ## Commands
 
 - **Navigation: Refresh** - Manually refresh the navigation tree
-- **Navigation: Toggle** - Show/hide the navigation panel
-- **Navigation: Add Group** - Add a new navigation group via UI
+- **Navigation: Toggle** - Show/hide the navigation panel  
+- **Navigation: Configure Navigation Groups** - Opens configuration file for editing
+  - **Workspace**: Opens `.vscode/settings.json` (preferred for project-specific config)
+  - **User Settings**: Opens VS Code settings if no workspace config exists
+  - **Demo Helper**: Offers to open `navigation-demo.json` for examples
 
 ## Pattern Matching
 
