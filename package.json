@@ -2,6 +2,7 @@
   "name": "navigation",
   "displayName": "Navigation",
   "publisher": "hailangx",
+  "icon": "navigation.png",
   "description": "Configurable file navigation with custom tree views for VS Code Explorer",
   "version": "1.0.2",
   "repository": {
