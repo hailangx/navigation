@@ -44,8 +44,14 @@ if (-not (Test-Path $extensionsDir)) {
     exit 1
 }
 
-# Create extension directory
-$extensionName = "navigation-1.0.0"
+# Read package.json to derive publisher, name and version
+$pkg = Get-Content package.json -Raw | ConvertFrom-Json
+$publisher = $pkg.publisher -or 'local'
+$name = $pkg.name
+$version = $pkg.version
+
+# Create extension directory using the expected VS Code format: publisher.name-version
+$extensionName = "$publisher.$name-$version"
 $targetDir = Join-Path $extensionsDir $extensionName
 
 Write-Host "📁 Installing to: $targetDir" -ForegroundColor Yellow
@@ -62,10 +68,18 @@ New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
 # Copy files
 Write-Host "📋 Copying extension files..." -ForegroundColor Yellow
 
+# Verify compiled output exists
+if (-not (Test-Path "out/extension.js")) {
+  Write-Host "⚠️  Compiled extension not found at out/extension.js. Did compilation succeed?" -ForegroundColor Yellow
+  Write-Host "   Run: npm run compile" -ForegroundColor Gray
+}
+
 $filesToCopy = @(
-    "package.json",
-    "README.md",
-    "out"
+  "package.json",
+  "README.md",
+  "out",
+  "CHANGELOG.md",
+  "LICENSE"
 )
 
 foreach ($file in $filesToCopy) {
