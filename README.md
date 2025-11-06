@@ -78,6 +78,41 @@ Configure navigation groups in your VS Code settings or workspace settings:
 
 ## 🎯 Quick Demo
 
+## 🛠️ Releasing a New Local Version
+
+If you make code changes and want to create a new patch release and install it locally, use the provided `release-and-install.ps1` script. It will:
+
+- Bump the patch version in `package.json` (or accept an explicit version)
+- Compile the TypeScript code
+- Package the extension into a `.vsix`
+- Install the `.vsix` locally in your VS Code
+- Commit the version bump and `.vsix` to git and create a tag (optional)
+- Push commits and tag to `origin` (optional)
+
+Quick usage (from the repository root):
+
+```powershell
+# Bump patch, package, install, commit, tag, and push
+./release-and-install.ps1
+
+# Dry run / local only: bump & package, but don't tag or push
+./release-and-install.ps1 -NoPush -NoTag
+
+# Specify explicit version
+./release-and-install.ps1 -Version 1.2.3 -NoPush -NoTag
+```
+
+If you only want to build and install quickly without committing or tagging, use `quick-install.ps1`:
+
+```powershell
+./quick-install.ps1
+```
+
+Notes:
+- The release script renames the generated `.vsix` to `navigation-<version>.vsix` and commits it. If you don't want the `.vsix` in git, run with `-NoPush` and manually remove the file before committing, or edit the script.
+- Make sure you have `code` (VS Code CLI) available in your PATH for automatic install.
+
+
 To quickly try out the extension with a comprehensive example, copy the configuration from `navigation-demo.json` in this repository:
 
 1. **Copy the demo config**: Open `navigation-demo.json` and copy its contents
