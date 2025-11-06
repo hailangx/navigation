@@ -1,8 +1,17 @@
 {
   "name": "navigation",
-  "displayName": "Navigation", "publisher": "local",
-  "description": "Configurable file navigation with custom tree views",
+  "displayName": "Navigation",
+  "publisher": "hailangx",
+  "description": "Configurable file navigation with custom tree views for VS Code Explorer",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hailangx/navigation.git"
+  },
+  "homepage": "https://github.com/hailangx/navigation#readme",
+  "bugs": {
+    "url": "https://github.com/hailangx/navigation/issues"
+  },
   "engines": {
     "vscode": "^1.105.0"
   },
@@ -140,8 +149,16 @@
     "@types/vscode": "^1.105.0",
     "typescript": "^4.9.5"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "navigation",
+    "file explorer",
+    "tree view",
+    "file organization",
+    "workspace",
+    "custom views",
+    "productivity"
+  ],
+  "author": "hailangx",
+  "license": "MIT",
   "type": "commonjs"
 }
