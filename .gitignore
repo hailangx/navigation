@@ -51,10 +51,11 @@ jspm_packages/
 # dotenv environment variables file
 .env
 
-# IDE files
-.vscode/settings.json
-.vscode/launch.json
-.vscode/extensions.json
+# IDE files (keep workspace config for demo)
+# .vscode/settings.json - Keep for demo configuration
+# .vscode/launch.json - Keep for debugging setup  
+# .vscode/extensions.json - Keep for recommended extensions
+# .vscode/tasks.json - Keep for build tasks
 *.swp
 *.swo
 *~

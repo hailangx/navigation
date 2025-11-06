@@ -2,6 +2,18 @@
 
 A configurable VS Code extension for organizing files into custom navigation trees in the Explorer panel.
 
+## 🚀 Try it Now!
+
+**Want to see it in action immediately?** Clone and run:
+
+```bash
+git clone https://github.com/hailangx/navigation.git
+cd navigation
+./bootstrap.ps1
+```
+
+✨ **That's it!** The extension will be installed and configured with a comprehensive demo. Just reload VS Code and check the Explorer panel for "📂 Navigation".
+
 ## Features
 
 - **Configurable Navigation Groups**: Define custom file organization hierarchies
@@ -125,9 +137,30 @@ Examples:
 - `docs/**/*.md` - All Markdown files in docs directory
 
 
-## 📦 Installation
+## 📦 Installation & Quick Start
 
-### Option 1: Manual Installation (Recommended)
+### 🚀 Option 1: Try it Now (Clone & Bootstrap) - **Recommended for Developers**
+Experience the extension immediately with full demo:
+
+```bash
+# Clone the repository
+git clone https://github.com/hailangx/navigation.git
+cd navigation
+
+# Run the bootstrap script (automatically sets everything up)
+./bootstrap.ps1
+```
+
+The bootstrap script will:
+- ✅ Install all dependencies
+- ✅ Compile the TypeScript code  
+- ✅ Package the extension
+- ✅ Install it locally in VS Code
+- ✅ Activate the demo configuration
+
+**After bootstrapping, just reload VS Code and see the Navigation panel in action!**
+
+### 📥 Option 2: Manual Installation (End Users)
 1. Download the latest `navigation-1.0.0.vsix` file from the [Releases page](https://github.com/hailangx/navigation/releases)
 2. Open VS Code
 3. Go to Extensions view (`Ctrl+Shift+X`)
@@ -135,12 +168,14 @@ Examples:
 5. Select "Install from VSIX..."
 6. Choose the downloaded `.vsix` file
 
-### Option 2: From Source
-1. Clone this repository
-2. Run `npm install`
-3. Run `npm run compile`
-4. Run `vsce package` to create the `.vsix` file
-5. Install the generated `.vsix` file following the steps above
+### 🛠️ Option 3: Build from Source
+```bash
+git clone https://github.com/hailangx/navigation.git
+cd navigation
+npm install
+npm run build
+code --install-extension navigation-1.0.0.vsix
+```
 
 
 ## Development

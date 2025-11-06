@@ -1,0 +1,145 @@
+{
+    "vscode-nmake-tools.workspaceBuildDirectories": [],
+    
+    // Welcome settings
+    "workbench.startupEditor": "readme",
+    "workbench.tips.enabled": true,
+    
+    // Navigation extension is configured below - workspace demo is active!
+    "navigation.groups": [
+        {
+            "name": "🚀 Demo Navigation",
+            "icon": "rocket",
+            "expanded": true,
+            "children": [
+                {
+                    "name": "📁 Project Files",
+                    "type": "files",
+                    "icon": "folder",
+                    "files": [
+                        "package.json",
+                        "tsconfig.json",
+                        "README.md",
+                        "CHANGELOG.md",
+                        "LICENSE"
+                    ]
+                },
+                {
+                    "name": "💻 Source Code",
+                    "type": "group",
+                    "icon": "code",
+                    "children": [
+                        {
+                            "name": "🎯 Main Extension",
+                            "type": "files",
+                            "icon": "file-code",
+                            "files": [
+                                "src/extension.ts",
+                                "src/navigationProvider.ts"
+                            ]
+                        },
+                        {
+                            "name": "⚙️ Configuration & Utils",
+                            "type": "files",
+                            "icon": "gear",
+                            "files": [
+                                "src/config.ts",
+                                "src/fileMatcher.ts"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "🔧 TypeScript Files",
+                    "type": "filter",
+                    "icon": "file-code",
+                    "pattern": "**/*.ts",
+                    "exclude": ["node_modules/**", "out/**"]
+                },
+                {
+                    "name": "📋 JSON Configuration",
+                    "type": "filter",
+                    "icon": "json",
+                    "pattern": "**/*.json",
+                    "exclude": ["node_modules/**", "package-lock.json"]
+                },
+                {
+                    "name": "📖 Documentation",
+                    "type": "group",
+                    "icon": "book",
+                    "children": [
+                        {
+                            "name": "📝 Markdown Files",
+                            "type": "filter",
+                            "icon": "markdown",
+                            "pattern": "**/*.md"
+                        },
+                        {
+                            "name": "📄 Text Files",
+                            "type": "filter",
+                            "icon": "file-text",
+                            "pattern": "**/*.txt"
+                        }
+                    ]
+                },
+                {
+                    "name": "🔨 Build & Scripts",
+                    "type": "group",
+                    "icon": "tools",
+                    "children": [
+                        {
+                            "name": "PowerShell Scripts",
+                            "type": "filter",
+                            "icon": "terminal-powershell",
+                            "pattern": "**/*.ps1"
+                        },
+                        {
+                            "name": "Build Output",
+                            "type": "filter",
+                            "icon": "file-binary",
+                            "pattern": "**/*.vsix"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "🎨 Advanced Examples",
+            "icon": "paintbrush",
+            "expanded": false,
+            "children": [
+                {
+                    "name": "🌐 Web Assets",
+                    "type": "filter",
+                    "icon": "globe",
+                    "pattern": "**/*.{html,css,js,jsx,vue,svelte}",
+                    "exclude": ["node_modules/**"]
+                },
+                {
+                    "name": "🖼️ Images & Media",
+                    "type": "filter",
+                    "icon": "file-media",
+                    "pattern": "**/*.{png,jpg,jpeg,gif,svg,ico,webp,mp4,mp3,wav}",
+                    "exclude": ["node_modules/**"]
+                },
+                {
+                    "name": "🧪 Test Files",
+                    "type": "filter",
+                    "icon": "beaker",
+                    "pattern": "**/*{test,spec}*",
+                    "exclude": ["node_modules/**"]
+                },
+                {
+                    "name": "⚡ Quick Access",
+                    "type": "files",
+                    "icon": "zap",
+                    "files": [
+                        "package.json",
+                        "src/extension.ts",
+                        "README.md"
+                    ]
+                }
+            ]
+        }
+    ]
+}
