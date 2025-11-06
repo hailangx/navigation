@@ -7,7 +7,7 @@ yarn-error.log*
 # Build outputs
 out/
 dist/
-*.vsix
+# *.vsix - Allow .vsix files for GitHub releases
 
 # Runtime data
 pids
