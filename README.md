@@ -60,6 +60,24 @@ Configure navigation groups in your VS Code settings or workspace settings:
 }
 ```
 
+## 🎯 Quick Demo
+
+To quickly try out the extension with a comprehensive example, copy the configuration from `navigation-demo.json` in this repository:
+
+1. **Copy the demo config**: Open `navigation-demo.json` and copy its contents
+2. **Open VS Code settings**: `Ctrl+,` (Cmd+, on Mac)
+3. **Search for "navigation"**
+4. **Edit the "Navigation: Groups" setting**
+5. **Paste the demo configuration**
+6. **Save and see the navigation panel populate**
+
+The demo configuration showcases:
+- 📁 **File organization** with exact file paths
+- 🔍 **Pattern matching** for TypeScript, JSON, and Markdown files
+- 📂 **Nested groups** for logical organization
+- 🎨 **Various icons** and display options
+- ⚡ **Quick access** groups for frequently used files
+
 ## Configuration Types
 
 ### NavigationGroupConfig
