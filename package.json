@@ -1,0 +1,147 @@
+{
+  "name": "navigation",
+  "displayName": "Navigation", "publisher": "local",
+  "description": "Configurable file navigation with custom tree views",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Navigation",
+      "properties": {
+        "navigation.groups": {
+          "type": "array",
+          "default": [],
+          "description": "Navigation groups configuration",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Display name for the group"
+              },
+              "icon": {
+                "type": "string",
+                "description": "Icon for the group (VS Code icon name)"
+              },
+              "expanded": {
+                "type": "boolean",
+                "default": true,
+                "description": "Whether the group should be expanded by default"
+              },
+              "children": {
+                "type": "array",
+                "description": "Child groups or files",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "description": "Display name"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": ["group", "files", "filter"],
+                      "description": "Type: 'group' for nested groups, 'files' for exact file paths, 'filter' for pattern matching"
+                    },
+                    "icon": {
+                      "type": "string",
+                      "description": "Icon (VS Code icon name)"
+                    },
+                    "files": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Array of exact file paths (for type 'files')"
+                    },
+                    "pattern": {
+                      "type": "string",
+                      "description": "File pattern to match (for type 'filter')"
+                    },
+                    "exclude": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Patterns to exclude"
+                    },
+                    "children": {
+                      "type": "array",
+                      "description": "Nested children (for type 'group')"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "navigationFiles",
+          "name": "📂 Navigation",
+          "when": "navigation:enabled"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "navigation.refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "navigation.openFile",
+        "title": "Open File"
+      },
+      {
+        "command": "navigation.toggle",
+        "title": "Toggle Navigation"
+      },
+      {
+        "command": "navigation.addGroup",
+        "title": "Add Navigation Group",
+        "icon": "$(add)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "navigation.refresh",
+          "when": "view == navigationFiles",
+          "group": "navigation@1"
+        },
+        {
+          "command": "navigation.addGroup",
+          "when": "view == navigationFiles",
+          "group": "navigation@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.126",
+    "@types/vscode": "^1.105.0",
+    "typescript": "^4.9.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

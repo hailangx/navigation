@@ -1,0 +1,34 @@
+{
+  "navigation.groups": [
+    {
+      "name": "� My Project",
+      "icon": "folder",
+      "expanded": true,
+      "children": [
+        {
+          "name": "📊 Source Code",
+          "type": "filter",
+          "icon": "file-code",
+          "pattern": "src/**/*.{ts,js,cpp,h}",
+          "exclude": ["*.test.*", "node_modules/**"]
+        },
+        {
+          "name": "🧪 Tests",
+          "type": "filter",
+          "icon": "beaker",
+          "pattern": "**/*test*",
+          "exclude": ["node_modules/**"]
+        },
+        {
+          "name": "📖 Documentation",
+          "type": "files",
+          "icon": "book",
+          "files": [
+            "README.md",
+            "docs/setup.md"
+          ]
+        }
+      ]
+    }
+  ]
+}
