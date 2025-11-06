@@ -123,6 +123,13 @@ releases/navigation-1.0.2.vsix
 
 If you prefer not to track built artifacts in git, either remove the file before committing or run the script with `-NoPush` and clean up the file.
 
+Release quick installer
+-----------------------
+
+Each release will include a small `quick-install.ps1` placed alongside the `.vsix` in the `releases/` folder. This script finds the latest `.vsix` in the same folder and runs the VS Code CLI to install it. This is useful for users who download release artifacts directly from GitHub.
+
+Note: The extension artifacts are not signed. On some platforms you may need to use the VS Code UI to "Install from VSIX..." if the automatic install via `code --install-extension` is blocked.
+
 
 To quickly try out the extension with a comprehensive example, copy the configuration from `navigation-demo.json` in this repository:
 
