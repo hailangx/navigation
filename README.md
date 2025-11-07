@@ -2,7 +2,7 @@
 
 A configurable VS Code extension for organizing files into custom navigation trees in the Explorer panel.
 
-![Navigation Extension Demo](https://raw.githubusercontent.com/hailangx/navigation/main/navigation.png)
+![Navigation Extension Demo](https://github.com/hailangx/navigation/blob/master/navigation.png?raw=true)
 
 
 ## 🚀 Try it Now!
